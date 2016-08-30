@@ -1,0 +1,46 @@
+.main-burger {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.burger-bar {
+  height: 10px;
+  width: 100%;
+  background: black;
+  transition: all 1s;
+}
+
+.burger-bar.top {
+  position: absolute;
+  top: 0;
+}
+
+.burger-bar.middle {
+  position: absolute;
+  top: 20px;
+  opacity: 1;
+}
+
+.burger-bar.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.is-active .burger-bar.middle {
+  opacity: 0;
+}
+
+.is-active .burger-bar.bottom {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.is-active .burger-bar.top {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
